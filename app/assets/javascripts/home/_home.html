@@ -6,7 +6,7 @@
       <span class="glyphicon glyphicon-thumbs-up"
         ng-click="incrementUpvotes(post)"></span>
       {{post.upvotes}}
-      <span style="font-size:20px; margin-left:10px;">
+      <span>
         <a ng-show="post.link" href="{{post.link}}">
           {{post.title}}
         </a>
@@ -15,8 +15,9 @@
         </span>
       </span>
       <span>
-          <a href="#/posts/{{post.id}}">Comments</a>
+          <a class="comments-link" href="#/posts/{{post.id}}">Comments</a>
         </span>
+        <p><small>posted by <em><a ng-href="#/users/{{post.user.username}}">{{post.user.username}}</a></em></small></p>
     </div>
 
     <form ng-submit="addPost()"
