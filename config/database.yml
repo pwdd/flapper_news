@@ -28,5 +28,5 @@ production:
   <<: *default
   database: flappernews_pg_production
   username: flappernews_pg
-  password: <%= ENV['BLOGGER_PG_DATABASE_PASSWORD'] %>
+  password: <%= ENV['FLAPPERNEWS_PG_DATABASE_PASSWORD'] %>
 
